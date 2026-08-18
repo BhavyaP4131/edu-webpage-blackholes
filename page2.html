@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Black Holes and Time - Page 2</title>
+    <!-- Linking the same external stylesheet used on index.html -->
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-    <!-- Header contains the page title -->
-    <header>
+    <!-- Header has a unique ID, styled the same way as index.html's header -->
+    <header id="site-header">
         <h1>Black Holes and the Bending of Time</h1>
     </header>
 
-    <!-- Main content area for this page -->
     <main>
 
-        <!-- Section 1: Explanation of time dilation -->
-        <section>
-            <h2>Time Slows Near a Black Hole</h2>
+        <!-- Section 1: unique ID + shared content-box class -->
+        <section class="content-box" id="time-section">
+            <h2 class="section-title">Time Slows Near a Black Hole</h2>
             <p>
                 Near a black hole, gravity is strong enough to affect the
                 flow of time itself. This effect, called time dilation, means
@@ -29,13 +30,12 @@
                 than clocks on Earth's surface.
             </p>
 
-            <!-- Image uses a relative path, alt text, and a width attribute -->
             <img src="images/time-dilation.jpg" alt="Illustration comparing two clocks, one running slower near a black hole" width="400">
         </section>
 
-        <!-- Section 2: Famous black holes (unordered list) -->
-        <section>
-            <h2>Famous Black Holes</h2>
+        <!-- Section 2: unique ID + shared content-box class -->
+        <section class="content-box" id="famous-section">
+            <h2 class="section-title">Famous Black Holes</h2>
             <ul>
                 <li>Sagittarius A* — center of the Milky Way</li>
                 <li>M87* — first black hole ever photographed</li>
@@ -52,8 +52,8 @@
 
     </main>
 
-    <!-- Footer includes a link back to the home page -->
-    <footer>
+    <!-- Footer has a unique ID and links back to the home page -->
+    <footer id="site-footer">
         <p><a href="index.html">Back to Home</a></p>
     </footer>
 
