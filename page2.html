@@ -4,58 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Holes and Time - Page 2</title>
+
+    <!-- Bootstrap CDN linked first so our custom style.css can override it -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-    <header id="site-header">
+    <header id="site-header" class="text-center py-4">
         <h1>Black Holes and the Bending of Time</h1>
         <nav aria-label="Page navigation">
             <a href="index.html">Return to the Black Holes overview homepage</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container my-4">
 
-        <section class="content-box" id="time-section">
-            <h2 class="section-title">Time Slows Near a Black Hole</h2>
-            <p>
-                Near a black hole, gravity is strong enough to affect the
-                flow of time itself. This effect, called time dilation, means
-                a clock close to a black hole ticks more slowly than a clock
-                far away.
-            </p>
+        <!-- Bootstrap grid places the two sections side by side on medium+ screens -->
+        <div class="row g-4">
 
-            <!-- h3 nests logically under this section's h2 -->
-            <h3>Measuring Time Dilation on Earth</h3>
-            <p>
-                This isn't just theory. Time dilation has been measured using
-                GPS satellites, which experience gravity slightly differently
-                than clocks on Earth's surface.
-            </p>
+            <div class="col-md-6">
+                <section class="content-box h-100" id="time-section">
+                    <h2 class="section-title">Time Slows Near a Black Hole</h2>
+                    <p>
+                        Near a black hole, gravity is strong enough to affect the
+                        flow of time itself. This effect, called time dilation, means
+                        a clock close to a black hole ticks more slowly than a clock
+                        far away.
+                    </p>
 
-            <img src="images/time-dilation.jpg" alt="Illustration comparing two analog clocks, with the clock closer to a black hole appearing to run slower" width="400">
-        </section>
+                    <h3>Measuring Time Dilation on Earth</h3>
+                    <p>
+                        This isn't just theory. Time dilation has been measured using
+                        GPS satellites, which experience gravity slightly differently
+                        than clocks on Earth's surface.
+                    </p>
 
-        <section class="content-box" id="famous-section">
-            <h2 class="section-title">Famous Black Holes</h2>
-            <ul>
-                <li>Sagittarius A* — center of the Milky Way</li>
-                <li>M87* — first black hole ever photographed</li>
-                <li>Cygnus X-1 — one of the first strong black hole candidates</li>
-            </ul>
-            <p>
-                Astronomers continue to search for new black holes using
-                powerful telescopes and gravitational wave detectors.
-            </p>
-        </section>
+                    <img src="images/time-dilation.jpg" alt="Illustration comparing two analog clocks, with the clock closer to a black hole appearing to run slower" class="img-fluid">
+                </section>
+            </div>
 
-        <!-- Descriptive link text instead of vague "click here" -->
-        <p><a href="index.html">Return to the black holes homepage for an overview</a></p>
+            <div class="col-md-6">
+                <section class="content-box h-100" id="famous-section">
+                    <h2 class="section-title">Famous Black Holes</h2>
+                    <ul>
+                        <li>Sagittarius A* — center of the Milky Way</li>
+                        <li>M87* — first black hole ever photographed</li>
+                        <li>Cygnus X-1 — one of the first strong black hole candidates</li>
+                    </ul>
+                    <p>
+                        Astronomers continue to search for new black holes using
+                        powerful telescopes and gravitational wave detectors.
+                    </p>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Bootstrap button class turns this internal link into a styled button -->
+        <div class="text-center my-4">
+            <a href="index.html" class="btn btn-warning">Return to the black holes homepage for an overview</a>
+        </div>
 
     </main>
 
-    <footer id="site-footer">
+    <footer id="site-footer" class="text-center py-4">
         <p><a href="index.html">Back to Home: The Science of Black Holes</a></p>
     </footer>
 
