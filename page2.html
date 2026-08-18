@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Holes and Time - Page 2</title>
-    <!-- Linking the same external stylesheet used on index.html -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-    <!-- Header has a unique ID, styled the same way as index.html's header -->
     <header id="site-header">
         <h1>Black Holes and the Bending of Time</h1>
+        <nav aria-label="Page navigation">
+            <a href="index.html">Return to the Black Holes overview homepage</a>
+        </nav>
     </header>
 
     <main>
 
-        <!-- Section 1: unique ID + shared content-box class -->
         <section class="content-box" id="time-section">
             <h2 class="section-title">Time Slows Near a Black Hole</h2>
             <p>
@@ -24,16 +25,18 @@
                 a clock close to a black hole ticks more slowly than a clock
                 far away.
             </p>
+
+            <!-- h3 nests logically under this section's h2 -->
+            <h3>Measuring Time Dilation on Earth</h3>
             <p>
                 This isn't just theory. Time dilation has been measured using
                 GPS satellites, which experience gravity slightly differently
                 than clocks on Earth's surface.
             </p>
 
-            <img src="images/time-dilation.jpg" alt="Illustration comparing two clocks, one running slower near a black hole" width="400">
+            <img src="images/time-dilation.jpg" alt="Illustration comparing two analog clocks, with the clock closer to a black hole appearing to run slower" width="400">
         </section>
 
-        <!-- Section 2: unique ID + shared content-box class -->
         <section class="content-box" id="famous-section">
             <h2 class="section-title">Famous Black Holes</h2>
             <ul>
@@ -47,14 +50,13 @@
             </p>
         </section>
 
-        <!-- Internal link back to the home page -->
-        <p><a href="index.html">Back to Home</a></p>
+        <!-- Descriptive link text instead of vague "click here" -->
+        <p><a href="index.html">Return to the black holes homepage for an overview</a></p>
 
     </main>
 
-    <!-- Footer has a unique ID and links back to the home page -->
     <footer id="site-footer">
-        <p><a href="index.html">Back to Home</a></p>
+        <p><a href="index.html">Back to Home: The Science of Black Holes</a></p>
     </footer>
 
 </body>

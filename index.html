@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Viewport meta tag is required for the media query to work correctly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Science of Black Holes</title>
-    <!-- Linking the external stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-    <!-- Header has a unique ID so it can be styled differently from the footer -->
     <header id="site-header">
         <h1>The Science of Black Holes</h1>
+        <!-- Nav landmark helps screen reader users jump straight to site navigation -->
+        <nav aria-label="Page navigation">
+            <a href="page2.html">Learn about black holes and time dilation on Page 2</a>
+        </nav>
     </header>
 
     <main>
 
-        <!-- Section 1: Introduction to black holes -->
-        <!-- .content-box class is reused on every section for consistent card styling -->
         <section class="content-box">
             <h2 class="section-title">What Is a Black Hole?</h2>
             <p>
@@ -29,19 +31,21 @@
                 directly. Scientists detect them by observing how nearby
                 stars and gas behave around an invisible object.
             </p>
+
+            <!-- h3 nests logically under this section's h2 -->
+            <h3>Why Studying Black Holes Matters</h3>
             <p>
                 Studying black holes helps scientists test Einstein's theory
                 of general relativity under the most extreme conditions in
                 the universe.
             </p>
 
-            <img src="images/black-hole.jpg" alt="Illustration of a black hole with a glowing accretion disk" width="400">
+            <!-- Descriptive alt text explains what the image shows, not just "image" -->
+            <img src="images/black-hole.jpg" alt="Illustration of a black hole with a glowing orange and yellow accretion disk against a starry background" width="400">
         </section>
 
-        <!-- Flexbox container places these two sections side by side -->
         <div class="flex-container">
 
-            <!-- Section 2: unique ID + shared class -->
             <section class="content-box" id="types-section">
                 <h2 class="section-title">Types of Black Holes</h2>
                 <ul>
@@ -51,7 +55,6 @@
                 </ul>
             </section>
 
-            <!-- Section 3: unique ID + shared class -->
             <section class="content-box" id="formation-section">
                 <h2 class="section-title">How a Black Hole Forms</h2>
                 <ol>
@@ -64,14 +67,13 @@
 
         </div>
 
-        <!-- Internal link to the second page -->
-        <p><a href="page2.html">Read more on Page 2</a></p>
+        <!-- Descriptive link text instead of vague "click here" or "read more" -->
+        <p><a href="page2.html">Continue reading about black holes and time on Page 2</a></p>
 
     </main>
 
-    <!-- Footer has a unique ID and links back to the other page -->
     <footer id="site-footer">
-        <p><a href="page2.html">Go to Page 2: Black Holes and Time</a></p>
+        <p><a href="page2.html">Go to Page 2: Black Holes and the Bending of Time</a></p>
     </footer>
 
 </body>
