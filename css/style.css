@@ -1,20 +1,19 @@
 /* ==========================================================
    TAG SELECTORS
-   These rules apply to every element of that tag on the page,
-   giving the whole site a consistent base look.
+   Bootstrap sets its own base styles for these tags, but we
+   override them here to keep our unique color scheme, font,
+   and dark theme. Loading style.css after Bootstrap lets these
+   rules take priority.
    ========================================================== */
 
 body {
     background-color: #0d0d1a;
     color: #e8e8f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
 }
 
 h1 {
-    text-align: center;
     font-size: 2.2rem;
     color: #ffcc66;
     margin: 0 0 12px 0;
@@ -27,38 +26,21 @@ h2 {
     padding-bottom: 6px;
 }
 
-/* h3 uses a slightly smaller, lighter style so the heading
-   hierarchy stays visually clear (h1 > h2 > h3) */
 h3 {
     color: #ffe0a3;
     font-size: 1.15rem;
     margin-top: 20px;
 }
 
-p {
-    text-align: left;
-    font-size: 1rem;
-    max-width: 700px;
-    margin: 12px auto;
-}
-
-ul, ol {
-    max-width: 700px;
-    margin: 12px auto;
-    padding-left: 24px;
-}
-
 img {
-    display: block;
-    margin: 16px auto;
     border-radius: 8px;
     border: 2px solid #444466;
-    max-width: 100%;
-    height: auto;
+    display: block;
+    margin: 16px auto;
 }
 
-/* Link color chosen to keep strong contrast (WCAG AA+) against
-   both the dark page background and the content-box background */
+/* Custom link color for our inline text links (not the Bootstrap buttons,
+   which use Bootstrap's own btn-warning styling instead) */
 a {
     color: #ffcc66;
     text-decoration: underline;
@@ -67,10 +49,8 @@ a {
 a:hover,
 a:focus {
     color: #ffe0a3;
-    text-decoration: underline;
 }
 
-/* Visible focus outline so keyboard users can see which link is active */
 a:focus {
     outline: 2px solid #ffe0a3;
     outline-offset: 2px;
@@ -79,45 +59,31 @@ a:focus {
 
 /* ==========================================================
    ID SELECTORS
+   Distinct header/footer treatment. Bootstrap's py-4 and
+   text-center utility classes now handle the padding and
+   centering in the HTML, so we only set colors and borders here.
    ========================================================== */
 
 #site-header {
     background-color: #1a1a33;
-    padding: 30px 20px;
     border-bottom: 4px solid #ffcc66;
-    text-align: center;
 }
 
 #site-footer {
     background-color: #1a1a33;
-    padding: 20px;
-    text-align: center;
     border-top: 4px solid #ffcc66;
-    margin-top: 40px;
-}
-
-
-/* ==========================================================
-   NAV STYLING
-   ========================================================== */
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    font-size: 0.95rem;
 }
 
 
 /* ==========================================================
    CLASS SELECTORS
+   Our own "card" look for each content section. Bootstrap has
+   a similar .card component, but we keep this custom class
+   since it matches our site's specific dark color palette.
    ========================================================== */
 
 .content-box {
     background-color: #16162b;
-    max-width: 800px;
-    margin: 24px auto;
     padding: 20px 24px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -130,36 +96,22 @@ nav a {
 
 
 /* ==========================================================
-   FLEXBOX LAYOUT
+   REMOVED / REFACTORED RULES
+   The old .flex-container and its Flexbox rules are no longer
+   needed — Bootstrap's grid system (.row / .col-md-6) in the
+   HTML now handles placing sections side by side and stacking
+   them on small screens automatically.
    ========================================================== */
-
-.flex-container {
-    display: flex;
-    gap: 24px;
-    max-width: 850px;
-    margin: 24px auto;
-    flex-wrap: wrap;
-}
-
-.flex-container .content-box {
-    flex: 1;
-    margin: 0;
-    min-width: 280px;
-}
 
 
 /* ==========================================================
    MEDIA QUERY — responsive breakpoint at 600px
-   On small screens (phones), stack the flex items instead of
-   squeezing them side by side, shrink heading sizes, and
-   reduce padding so the site stays readable and usable.
+   Bootstrap's grid already handles layout stacking, so this
+   media query now only fine-tunes font sizes and spacing for
+   our custom elements on small screens.
    ========================================================== */
 
 @media (max-width: 600px) {
-    .flex-container {
-        flex-direction: column;
-    }
-
     h1 {
         font-size: 1.6rem;
     }
@@ -172,17 +124,7 @@ nav a {
         font-size: 1rem;
     }
 
-    p, ul, ol {
-        font-size: 0.95rem;
-        padding-left: 20px;
-    }
-
     .content-box {
         padding: 16px;
-        margin: 16px 12px;
-    }
-
-    #site-header, #site-footer {
-        padding: 20px 12px;
     }
 }
