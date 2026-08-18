@@ -1,0 +1,142 @@
+/* ==========================================================
+   TAG SELECTORS
+   These rules apply to every element of that tag on the page,
+   giving the whole site a consistent base look.
+   ========================================================== */
+
+body {
+    background-color: #0d0d1a;
+    color: #e8e8f0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #ffcc66;
+    margin: 0;
+}
+
+h2 {
+    color: #ffcc66;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #444466;
+    padding-bottom: 6px;
+}
+
+p {
+    text-align: left;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 12px auto;
+}
+
+ul, ol {
+    max-width: 700px;
+    margin: 12px auto;
+    padding-left: 24px;
+}
+
+img {
+    display: block;
+    margin: 16px auto;
+    border-radius: 8px;
+    border: 2px solid #444466;
+}
+
+a {
+    color: #ffcc66;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   ID SELECTORS
+   IDs target one unique element each. Used here to give the
+   header and footer clearly distinct visual treatment.
+   ========================================================== */
+
+#site-header {
+    background-color: #1a1a33;
+    padding: 30px 20px;
+    border-bottom: 4px solid #ffcc66;
+}
+
+#site-footer {
+    background-color: #1a1a33;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #ffcc66;
+    margin-top: 40px;
+}
+
+
+/* ==========================================================
+   CLASS SELECTORS
+   Classes are reused across multiple elements to apply the
+   same styling pattern wherever that class appears.
+   ========================================================== */
+
+.content-box {
+    background-color: #16162b;
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 20px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   FLEXBOX LAYOUT
+   Places the "Types of Black Holes" and "How a Black Hole
+   Forms" sections side by side instead of stacked.
+   ========================================================== */
+
+.flex-container {
+    display: flex;
+    gap: 24px;
+    max-width: 850px;
+    margin: 24px auto;
+    flex-wrap: wrap;
+}
+
+.flex-container .content-box {
+    flex: 1;
+    margin: 0;
+    min-width: 280px;
+}
+
+
+/* ==========================================================
+   MEDIA QUERY
+   On small screens, stack the flex items instead of squeezing
+   them side by side, so the site stays readable on mobile.
+   ========================================================== */
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .content-box {
+        padding: 16px;
+        margin: 16px 12px;
+    }
+}
