@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport meta tag is required for the media query to work correctly on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Science of Black Holes</title>
+
+    <!-- Bootstrap CDN linked first so our custom style.css can override it -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom stylesheet linked after Bootstrap so our rules take priority -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-    <header id="site-header">
+    <!-- Bootstrap text-center utility class centers the header content -->
+    <header id="site-header" class="text-center py-4">
         <h1>The Science of Black Holes</h1>
-        <!-- Nav landmark helps screen reader users jump straight to site navigation -->
         <nav aria-label="Page navigation">
             <a href="page2.html">Learn about black holes and time dilation on Page 2</a>
         </nav>
     </header>
 
-    <main>
+    <!-- Bootstrap container centers and pads all main content -->
+    <main class="container my-4">
 
         <section class="content-box">
             <h2 class="section-title">What Is a Black Hole?</h2>
@@ -32,7 +36,6 @@
                 stars and gas behave around an invisible object.
             </p>
 
-            <!-- h3 nests logically under this section's h2 -->
             <h3>Why Studying Black Holes Matters</h3>
             <p>
                 Studying black holes helps scientists test Einstein's theory
@@ -40,39 +43,48 @@
                 the universe.
             </p>
 
-            <!-- Descriptive alt text explains what the image shows, not just "image" -->
-            <img src="images/black-hole.jpg" alt="Illustration of a black hole with a glowing orange and yellow accretion disk against a starry background" width="400">
+            <!-- Bootstrap img-fluid keeps the image responsive inside the grid -->
+            <img src="images/black-hole.jpg" alt="Illustration of a black hole with a glowing orange and yellow accretion disk against a starry background" class="img-fluid">
         </section>
 
-        <div class="flex-container">
+        <!-- Bootstrap grid: row/col replaces the old custom Flexbox container.
+             col-md-6 places these side by side on medium+ screens and stacks
+             them automatically on small screens without any extra media query. -->
+        <div class="row mt-4 g-4">
 
-            <section class="content-box" id="types-section">
-                <h2 class="section-title">Types of Black Holes</h2>
-                <ul>
-                    <li>Stellar black holes</li>
-                    <li>Supermassive black holes</li>
-                    <li>Intermediate black holes</li>
-                </ul>
-            </section>
+            <div class="col-md-6">
+                <section class="content-box h-100" id="types-section">
+                    <h2 class="section-title">Types of Black Holes</h2>
+                    <ul>
+                        <li>Stellar black holes</li>
+                        <li>Supermassive black holes</li>
+                        <li>Intermediate black holes</li>
+                    </ul>
+                </section>
+            </div>
 
-            <section class="content-box" id="formation-section">
-                <h2 class="section-title">How a Black Hole Forms</h2>
-                <ol>
-                    <li>A massive star runs out of nuclear fuel</li>
-                    <li>The star's core collapses under its own gravity</li>
-                    <li>The outer layers explode outward as a supernova</li>
-                    <li>The collapsed core becomes a black hole</li>
-                </ol>
-            </section>
+            <div class="col-md-6">
+                <section class="content-box h-100" id="formation-section">
+                    <h2 class="section-title">How a Black Hole Forms</h2>
+                    <ol>
+                        <li>A massive star runs out of nuclear fuel</li>
+                        <li>The star's core collapses under its own gravity</li>
+                        <li>The outer layers explode outward as a supernova</li>
+                        <li>The collapsed core becomes a black hole</li>
+                    </ol>
+                </section>
+            </div>
 
         </div>
 
-        <!-- Descriptive link text instead of vague "click here" or "read more" -->
-        <p><a href="page2.html">Continue reading about black holes and time on Page 2</a></p>
+        <!-- Bootstrap button classes turn this internal link into a styled button -->
+        <div class="text-center my-4">
+            <a href="page2.html" class="btn btn-warning">Continue reading about black holes and time on Page 2</a>
+        </div>
 
     </main>
 
-    <footer id="site-footer">
+    <footer id="site-footer" class="text-center py-4">
         <p><a href="page2.html">Go to Page 2: Black Holes and the Bending of Time</a></p>
     </footer>
 
